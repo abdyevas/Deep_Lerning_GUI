@@ -1,1 +1,1 @@
-# Deep_Lerning_GUI
+# GUI for Deep Learning architectures representation
