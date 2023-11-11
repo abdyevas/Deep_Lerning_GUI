@@ -348,7 +348,7 @@ class GUI:
             err.notCreated()
         else:
             self.pInputData = ""
-            self.pInputData = askopenfilename(initialdir="./", filetypes=[("Text file", "*.txt"), ("CSV Files","*.csv")], title="Choose Input Data.")
+            self.pInputData = askopenfilename(initialdir="./data/", filetypes=[("Text file", "*.txt"), ("CSV Files","*.csv")], title="Choose Input Data.")
             self.train = pd.read_csv(self.pInputData, sep=',', header=None)
             filename = self.pInputData.split('/')[len(self.pInputData.split('/'))-1]
             # Add filename to the GUI
@@ -365,7 +365,7 @@ class GUI:
             err.noInputData()
         else:
             self.pOutputData = ""
-            self.pOutputData = askopenfilename(initialdir="./", filetypes=[("Text file", "*.txt"), ("CSV Files","*.csv")], title="Choose Input Data.")
+            self.pOutputData = askopenfilename(initialdir="./data/", filetypes=[("Text file", "*.txt"), ("CSV Files","*.csv")], title="Choose Input Data.")
             self.y_train = pd.read_csv(self.pOutputData, sep=',', header=None)
             filename = self.pOutputData.split('/')[len(self.pOutputData.split('/'))-1]
             # Add filename to GUI
@@ -411,7 +411,7 @@ class GUI:
             err.notTrained()
         else:
             self.pTestData = ""
-            self.pTestData = askopenfilename(initialdir="./", filetypes=[("Text file", "*.txt"), ("CSV Files","*.csv")], title="Choose Input Data.")
+            self.pTestData = askopenfilename(initialdir="./data/", filetypes=[("Text file", "*.txt"), ("CSV Files","*.csv")], title="Choose Input Data.")
             self.test = pd.read_csv(self.pTestData, sep=',', header=None)
             filename = self.pTestData.split('/')[len(self.pTestData.split('/'))-1]
             # Add filename to GUI
